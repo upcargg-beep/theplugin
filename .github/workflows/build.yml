@@ -18,10 +18,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn -B package
+        run: mvn -B -f consolecmd/pom.xml package
 
       - name: Upload jar
         uses: actions/upload-artifact@v4
         with:
           name: consolecmd-jar
-          path: target/consolecmd.jar
+          path: consolecmd/target/consolecmd.jar
