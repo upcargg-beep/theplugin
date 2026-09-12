@@ -1,0 +1,19 @@
+name: ConsoleCmd
+version: 1.0.0
+main: com.example.consolecmd.ConsoleCmdPlugin
+api-version: 1.20
+author: You
+
+commands:
+  consoletoggle:
+    description: Enable or disable the #console chat trigger
+    usage: /consoletoggle <on|off>
+    permission: consolecmd.admin
+
+permissions:
+  consolecmd.use:
+    description: Allows using #console <command> in chat to run a command as console
+    default: op        # change to 'true' to let EVERY player use it
+  consolecmd.admin:
+    description: Allows toggling the feature on/off
+    default: op
